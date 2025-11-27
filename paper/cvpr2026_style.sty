@@ -1,0 +1,77 @@
+% CVPR 2026 Paper Style
+% Based on standard CVPR formatting guidelines
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{cvpr2026_style}[2025/01/01 CVPR 2026 Style]
+
+% Page layout
+\RequirePackage[
+  letterpaper,
+  left=0.625in,
+  right=0.625in,
+  top=1in,
+  bottom=1in,
+  columnsep=0.25in
+]{geometry}
+
+% Typography
+\RequirePackage{times}
+\RequirePackage{microtype}
+
+% Math
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+
+% Graphics
+\RequirePackage{graphicx}
+\RequirePackage{float}
+\RequirePackage{subcaption}
+
+% Tables
+\RequirePackage{booktabs}
+\RequirePackage{multirow}
+
+% Colors
+\RequirePackage{xcolor}
+
+% Hyperlinks
+\RequirePackage[
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=blue,
+  urlcolor=blue
+]{hyperref}
+
+% Algorithm
+\RequirePackage{algorithm}
+\RequirePackage{algorithmic}
+
+% Two-column layout
+\RequirePackage{multicol}
+
+% Title formatting
+\renewcommand{\maketitle}{%
+  \begin{center}
+    {\LARGE\bfseries\@title\par}
+    \vspace{0.5em}
+    {\large\@author\par}
+    \vspace{0.5em}
+    {\normalsize\@date\par}
+  \end{center}
+  \vspace{1em}
+}
+
+% Section formatting
+\RequirePackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries}{\thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries}{\thesubsubsection.}{0.5em}{}
+
+% Caption formatting
+\RequirePackage[font=small,labelfont=bf]{caption}
+
+% Bibliography
+\RequirePackage[numbers,sort&compress]{natbib}
+
+\endinput
